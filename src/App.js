@@ -11,6 +11,8 @@ import { useState } from "react";
 import InputText from "./components/InputText";
 import InputPassword from "./components/InputPassword";
 import InputEmail from "./components/InputEmail";
+import InputTel from "./components/InputTel";
+
 
 
 function App() {
@@ -45,6 +47,9 @@ function App() {
   const [clave, setClave] = useState("");
 
   const [correo, setCorreo] = useState("");
+
+  const [telefono, setTelefono] = useState("");
+
 
 
   return (
@@ -92,7 +97,19 @@ function App() {
           value={correo}
           onChange={(e) => setCorreo(e.target.value)}
         />
-        <Boton texto="Enviar" onClick={() => alert("Nombre ingresado: " + nombre + ", Clave ingresada: " + clave + ", Correo ingresado: " + correo)} />
+        <InputTel
+          placeholder="Escribe tu número de teléfono"
+          value={telefono}
+          onChange={(e) => setTelefono(e.target.value)}
+        />
+        <Boton texto="Enviar" onClick={() => alert(
+         "Nombre ingresado: " + nombre +
+        "\nClave ingresada: " + clave +
+        "\nCorreo ingresado: " + correo +
+        "\nTeléfono ingresado: " + telefono
+        )
+        } 
+        />
       </Formulario>
     </div>
   );
