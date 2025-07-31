@@ -1,23 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import Imagen from "./components/Imagen";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container mt-5">
+        <Imagen
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbGid74hA9Yh9es_e0tk-7G0B-koykVSDNBA&s" // URL de la imagen
+          alt="ESPE" // Texto alternativo
+          width="600" // Ancho de la imagen
+          height="150" // Alto de la imagen
+        />
     </div>
   );
 }
