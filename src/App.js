@@ -12,7 +12,7 @@ import InputText from "./components/InputText";
 import InputPassword from "./components/InputPassword";
 import InputEmail from "./components/InputEmail";
 import InputTel from "./components/InputTel";
-
+import InputUrl from "./components/InputUrl";
 
 
 function App() {
@@ -50,6 +50,7 @@ function App() {
 
   const [telefono, setTelefono] = useState("");
 
+  const [pagina, setPagina] = useState("");
 
 
   return (
@@ -102,11 +103,17 @@ function App() {
           value={telefono}
           onChange={(e) => setTelefono(e.target.value)}
         />
+        <InputUrl
+          placeholder="Escribe tu página web"
+          value={pagina}
+          onChange={(e) => setPagina(e.target.value)}
+        />
         <Boton texto="Enviar" onClick={() => alert(
          "Nombre ingresado: " + nombre +
         "\nClave ingresada: " + clave +
         "\nCorreo ingresado: " + correo +
-        "\nTeléfono ingresado: " + telefono
+        "\nTeléfono ingresado: " + telefono +
+        "\nPágina web ingresada: " + pagina
         )
         } 
         />
