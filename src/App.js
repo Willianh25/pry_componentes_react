@@ -6,6 +6,9 @@ import Lista from "./components/Lista";
 import Tabla from "./components/Tabla";
 import Formulario from "./components/Formulario";
 import Boton from "./components/Boton";
+import Input from "./components/Input";
+import { useState } from "react";
+
 
 function App() {
 
@@ -33,6 +36,9 @@ function App() {
   const enviarFormulario = () => {
     alert("Formulario enviado con éxito");
   };
+
+  const [nombre, setNombre] = useState("");
+
 
   return (
     <div className="container mt-5">
@@ -64,8 +70,13 @@ function App() {
 
       <Titulo texto="Formulario de Contacto" nivel={4} />
       <Formulario>
-        <p>Este formulario está listo para contener campos.</p>
-        <Boton texto="Enviar" onClick={enviarFormulario} />
+       <Input
+          type="text"
+          placeholder="Escribe tu nombre"
+          value={nombre}
+          onChange={(e) => setNombre(e.target.value)}
+        />
+        <Boton texto="Enviar" onClick={() => alert("Nombre ingresado: " + nombre)} />
       </Formulario>
     </div>
   );
