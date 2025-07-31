@@ -2,8 +2,19 @@ import Imagen from "./components/Imagen";
 import Titulo from "./components/Titulo";
 import Parrafo from "./components/Parrafo";
 import Enlace from "./components/Enlace";
+import Lista from "./components/Lista";
 
 function App() {
+
+  const tecnologias = [
+    "Superior en Redes",
+    "Superior en Logistica y Transporte",
+    "Superior en Mecánica Automotriz",
+    "Superior en Electromecánica",
+    "Superior en Seguridad y Prevención de Riesgos Laborales",
+    "Superior en Automatización e Instrumentos",
+    "Superior en Mecánica Aeronáutica",
+  ];
   return (
     <div className="container mt-5">
       <Titulo texto="Bienvenido a Componentes React" nivel={1} />
@@ -25,6 +36,9 @@ function App() {
       <Parrafo texto="Se puede realizar cambios en el texto" />
 
       <Enlace href="https://www.espe.edu.ec/" texto="Visita la página de la ESPE" />
+
+      <Titulo texto="Lista de Tecnologías" nivel={4} />
+      <Lista elementos={tecnologias} />
     </div>
   );
 }
