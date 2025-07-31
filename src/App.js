@@ -1,6 +1,7 @@
 import Imagen from "./components/Imagen";
 import Titulo from "./components/Titulo";
 import Parrafo from "./components/Parrafo";
+import Enlace from "./components/Enlace";
 
 function App() {
   return (
@@ -22,6 +23,8 @@ function App() {
 
       <Parrafo texto="Este es un párrafo creado desde un componente reutilizable" />
       <Parrafo texto="Se puede realizar cambios en el texto" />
+
+      <Enlace href="https://www.espe.edu.ec/" texto="Visita la página de la ESPE" />
     </div>
   );
 }
