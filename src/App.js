@@ -5,6 +5,7 @@ import Enlace from "./components/Enlace";
 import Lista from "./components/Lista";
 import Tabla from "./components/Tabla";
 import Formulario from "./components/Formulario";
+import Boton from "./components/Boton";
 
 function App() {
 
@@ -28,6 +29,10 @@ function App() {
     ["Modelo Avanzado de Base de Datos", 23393, "Cesar Guayasamin"],
     ["Programación Integral Componentes Web", 23407, "Vilmer Criollo"],
   ];
+
+  const enviarFormulario = () => {
+    alert("Formulario enviado con éxito");
+  };
 
   return (
     <div className="container mt-5">
@@ -60,6 +65,7 @@ function App() {
       <Titulo texto="Formulario de Contacto" nivel={4} />
       <Formulario>
         <p>Este formulario está listo para contener campos.</p>
+        <Boton texto="Enviar" onClick={enviarFormulario} />
       </Formulario>
     </div>
   );
