@@ -13,8 +13,9 @@ import InputPassword from "./components/InputPassword";
 import InputEmail from "./components/InputEmail";
 import InputTel from "./components/InputTel";
 import InputUrl from "./components/InputUrl";
+import InputSearch from "./components/InputSearch";
 
-
+// Este es el componente principal de la aplicación.
 function App() {
 
   const tecnologias = [
@@ -42,6 +43,7 @@ function App() {
     alert("Formulario enviado con éxito");
   };
 
+  // Estados para manejar los valores de los inputs del formulario
   const [nombre, setNombre] = useState("");
 
   const [clave, setClave] = useState("");
@@ -52,6 +54,7 @@ function App() {
 
   const [pagina, setPagina] = useState("");
 
+  const [busqueda, setBusqueda] = useState("");
 
   return (
     <div className="container mt-5">
@@ -108,12 +111,19 @@ function App() {
           value={pagina}
           onChange={(e) => setPagina(e.target.value)}
         />
+        <InputSearch
+          placeholder="Buscar algo..."
+          value={busqueda}
+          onChange={(e) => setBusqueda(e.target.value)}
+        />
+
         <Boton texto="Enviar" onClick={() => alert(
          "Nombre ingresado: " + nombre +
         "\nClave ingresada: " + clave +
         "\nCorreo ingresado: " + correo +
         "\nTeléfono ingresado: " + telefono +
-        "\nPágina web ingresada: " + pagina
+        "\nPágina web ingresada: " + pagina +
+        "\nBúsqueda ingresada: " + busqueda
         )
         } 
         />
