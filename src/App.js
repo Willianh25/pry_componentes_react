@@ -10,6 +10,8 @@ import Input from "./components/Input";
 import { useState } from "react";
 import InputText from "./components/InputText";
 import InputPassword from "./components/InputPassword";
+import InputEmail from "./components/InputEmail";
+
 
 function App() {
 
@@ -41,6 +43,9 @@ function App() {
   const [nombre, setNombre] = useState("");
 
   const [clave, setClave] = useState("");
+
+  const [correo, setCorreo] = useState("");
+
 
   return (
     <div className="container mt-5">
@@ -82,7 +87,12 @@ function App() {
           value={clave}
           onChange={(e) => setClave(e.target.value)}
         />
-        <Boton texto="Enviar" onClick={() => alert("Nombre ingresado: " + nombre + ", Clave ingresada: " + clave)} />
+         <InputEmail
+          placeholder="Escribe tu correo"
+          value={correo}
+          onChange={(e) => setCorreo(e.target.value)}
+        />
+        <Boton texto="Enviar" onClick={() => alert("Nombre ingresado: " + nombre + ", Clave ingresada: " + clave + ", Correo ingresado: " + correo)} />
       </Formulario>
     </div>
   );
