@@ -3,6 +3,7 @@ import Titulo from "./components/Titulo";
 import Parrafo from "./components/Parrafo";
 import Enlace from "./components/Enlace";
 import Lista from "./components/Lista";
+import Tabla from "./components/Tabla";
 
 function App() {
 
@@ -15,6 +16,18 @@ function App() {
     "Superior en Automatización e Instrumentos",
     "Superior en Mecánica Aeronáutica",
   ];
+
+  // Encabezado de la tabla
+  const encabezados = ["Materia", "NRC", "Docente"];
+
+  // Filas de la tabla
+  const filas = [
+    ["Desarrollo Web", 23380, "David Galarza"],
+    ["Inteligencia Artificial", 23388, "Mauricio Loachamin"],
+    ["Modelo Avanzado de Base de Datos", 23393, "Cesar Guayasamin"],
+    ["Programación Integral Componentes Web", 23407, "Vilmer Criollo"],
+  ];
+
   return (
     <div className="container mt-5">
       <Titulo texto="Bienvenido a Componentes React" nivel={1} />
@@ -39,6 +52,9 @@ function App() {
 
       <Titulo texto="Lista de Tecnologías" nivel={4} />
       <Lista elementos={tecnologias} />
+
+      <Titulo texto="Tabla de Materias" nivel={4} />
+      <Tabla cabecera={encabezados} datos={filas} />
     </div>
   );
 }
