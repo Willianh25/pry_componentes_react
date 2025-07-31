@@ -8,6 +8,7 @@ import Formulario from "./components/Formulario";
 import Boton from "./components/Boton";
 import Input from "./components/Input";
 import { useState } from "react";
+import InputText from "./components/InputText";
 
 
 function App() {
@@ -70,8 +71,7 @@ function App() {
 
       <Titulo texto="Formulario de Contacto" nivel={4} />
       <Formulario>
-       <Input
-          type="text"
+       <InputText
           placeholder="Escribe tu nombre"
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
