@@ -1,5 +1,6 @@
 import Imagen from "./components/Imagen";
 import Titulo from "./components/Titulo";
+import Parrafo from "./components/Parrafo";
 
 function App() {
   return (
@@ -18,6 +19,9 @@ function App() {
       <Titulo texto="Componentes React" nivel={4} />
       <Titulo texto="Representación de elementos HTML" nivel={5} />
       <Titulo texto="ESPE" nivel={6} />
+
+      <Parrafo texto="Este es un párrafo creado desde un componente reutilizable" />
+      <Parrafo texto="Se puede realizar cambios en el texto" />
     </div>
   );
 }
