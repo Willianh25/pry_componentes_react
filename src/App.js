@@ -4,6 +4,7 @@ import Parrafo from "./components/Parrafo";
 import Enlace from "./components/Enlace";
 import Lista from "./components/Lista";
 import Tabla from "./components/Tabla";
+import Formulario from "./components/Formulario";
 
 function App() {
 
@@ -55,6 +56,11 @@ function App() {
 
       <Titulo texto="Tabla de Materias" nivel={4} />
       <Tabla cabecera={encabezados} datos={filas} />
+
+      <Titulo texto="Formulario de Contacto" nivel={4} />
+      <Formulario>
+        <p>Este formulario está listo para contener campos.</p>
+      </Formulario>
     </div>
   );
 }
