@@ -13,7 +13,11 @@ function App() {
           height="150" // Alto de la imagen
         />
 
-      <Titulo texto="Willian Herrera" nivel={3} />
+      <Titulo texto="Willian Herrera" nivel={2} />
+      <Titulo texto="NRC 23407" nivel={3} />
+      <Titulo texto="Componentes React" nivel={4} />
+      <Titulo texto="Representación de elementos HTML" nivel={5} />
+      <Titulo texto="ESPE" nivel={6} />
     </div>
   );
 }
