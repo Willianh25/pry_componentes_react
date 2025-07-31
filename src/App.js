@@ -9,7 +9,7 @@ import Boton from "./components/Boton";
 import Input from "./components/Input";
 import { useState } from "react";
 import InputText from "./components/InputText";
-
+import InputPassword from "./components/InputPassword";
 
 function App() {
 
@@ -40,6 +40,7 @@ function App() {
 
   const [nombre, setNombre] = useState("");
 
+  const [clave, setClave] = useState("");
 
   return (
     <div className="container mt-5">
@@ -76,7 +77,12 @@ function App() {
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
         />
-        <Boton texto="Enviar" onClick={() => alert("Nombre ingresado: " + nombre)} />
+        <InputPassword
+          placeholder="Escribe tu contraseña"
+          value={clave}
+          onChange={(e) => setClave(e.target.value)}
+        />
+        <Boton texto="Enviar" onClick={() => alert("Nombre ingresado: " + nombre + ", Clave ingresada: " + clave)} />
       </Formulario>
     </div>
   );
